@@ -1,0 +1,173 @@
+/* Reset and Base Styles for Login
+   - Clears default margins, padding, and sets a modern font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+}
+
+/* Body Styling for Login
+     - Sets a soft gradient background, centered layout */
+body {
+  background: linear-gradient(
+    135deg,
+    #f0f4f8 0%,
+    #e6f0ff 100%
+  ); /* Light, modern gradient */
+  color: #1a202c; /* Dark text for readability */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Login Container
+     - White box with simple shadow, centered on the page */
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Light shadow for elevation */
+  padding: 2rem;
+}
+
+/* Header for Login
+     - Centered heading and tagline */
+.login-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-header h1 {
+  font-size: 2rem; /* Large, bold heading */
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+}
+
+.login-header .tagline {
+  font-size: 1rem;
+  color: #4a5568; /* Muted text for secondary info */
+  font-weight: 400;
+}
+
+/* Form Styling for Login
+     - Simple, vertical layout for inputs and buttons */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Form Group for Login
+     - Labels and inputs with basic styling */
+.form-group {
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #e2e8f0; /* Light border for inputs */
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #1a202c;
+  background: #f9fafb; /* Light background for inputs */
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3b82f6; /* Blue focus for interactivity */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1); /* Simple focus glow */
+}
+
+/* Error Messages for Login
+     - Clear, red text for errors with a light background */
+.error,
+.login-error {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
+  font-weight: 500;
+}
+
+.login-error {
+  background: rgba(220, 38, 38, 0.05);
+  padding: 0.6rem;
+  border-left: 2px solid #dc2626;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* Login Button
+     - Simple blue button with hover effect */
+.login-button {
+  width: 100%;
+  padding: 0.8rem;
+  background: #3b82f6; /* Consistent blue */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.login-button:hover {
+  background: #2563eb; /* Darker blue on hover */
+}
+
+/* Forgot Password and Sign Up Links for Login
+     - Simple, blue links with hover effect */
+.login-links {
+  text-align: center;
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.login-links a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.login-links a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Responsive Design for Login
+     - Adjusts layout for mobile screens */
+@media (max-width: 480px) {
+  .login-container {
+    max-width: 100%;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  .login-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .login-header .tagline {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,261 @@
+/* Reset and Base Styles for Home
+   - Clears default margins, padding, and sets a modern font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+}
+
+/* Body Styling for Home
+     - Sets a soft gradient background */
+body {
+  background: linear-gradient(
+    135deg,
+    #f0f4f8 0%,
+    #e6f0ff 100%
+  ); /* Light, modern gradient */
+  color: #1a202c; /* Dark text for readability */
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* Home Page Container
+     - White box with simple shadow, centered on the page */
+.home-page {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Light shadow for elevation */
+  padding: 2rem;
+}
+
+/* Banner Section for Home
+     - Blue background with white text, centered */
+.banner {
+  background: #3b82f6; /* Single blue color for simplicity */
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+}
+
+.banner h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.banner p {
+  font-size: 0.9rem;
+  color: #f3f4f6;
+  margin-bottom: 1rem;
+}
+
+.book-now {
+  background: #ffffff;
+  color: #3b82f6;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer; /* Ensure cursor is set to pointer for functionality */
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.book-now:hover {
+  background: #f3f4f6;
+  color: #2563eb;
+}
+
+/* Stats Section for Home
+     - Simple grid layout for stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  padding: 1.5rem 0;
+  margin-bottom: 1.5rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1.2rem 0.8rem;
+}
+
+.stat-item h3 {
+  font-size: 1.5rem;
+  color: #3b82f6;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.stat-item p {
+  font-size: 0.8rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+/* Services Sections for Home
+     - Simple bars for services with blue accents */
+.key-services,
+.popular-services {
+  margin-bottom: 1.5rem;
+}
+
+.key-services h2,
+.popular-services h2 {
+  font-size: 1.4rem;
+  color: #1a202c;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.service-bar {
+  background: #ffffff;
+  color: #1a202c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.8rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.service-bar:hover {
+  transform: translateY(-2px);
+}
+
+.service-bar span {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.service-bar .book-now {
+  background: #3b82f6;
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.service-bar .book-now:hover {
+  background: #2563eb;
+}
+
+/* Footer Section for Home
+     - Simple footer with blue links */
+.footer {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+  border-radius: 0 0 12px 12px;
+  margin-top: 1.5rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 180px;
+}
+
+.footer-section h4 {
+  font-size: 1rem;
+  color: #1a202c;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+.footer-section p {
+  font-size: 0.8rem;
+  color: #4a5568;
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+
+.footer-section a {
+  font-size: 0.8rem;
+  color: #3b82f6;
+  text-decoration: none;
+  margin-right: 0.6rem;
+  transition: color 0.2s ease;
+}
+
+.footer-section a:hover {
+  color: #2563eb;
+}
+
+.copyright {
+  font-size: 0.7rem;
+  color: #718096;
+  text-align: center;
+  margin-top: 0.8rem;
+}
+
+/* Responsive Design for Both Pages
+     - Adjusts layout for mobile screens */
+@media (max-width: 768px) {
+  .login-container,
+  .home-page {
+    max-width: 100%;
+    padding: 1.2rem;
+    border-radius: 0;
+  }
+
+  .login-header h1,
+  .banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .login-header .tagline,
+  .banner p {
+    font-size: 0.9rem;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .key-services h2,
+  .popular-services h2 {
+    font-size: 1.2rem;
+  }
+
+  .service-bar {
+    padding: 0.8rem 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    min-width: 100%;
+    margin-bottom: 0.8rem;
+  }
+}
