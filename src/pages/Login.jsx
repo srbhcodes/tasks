@@ -1,24 +1,24 @@
+// src/pages/Login.jsx
 import { useNavigate } from "react-router-dom";
 import LoginForm from "../components/LoginForm.jsx";
+import { useAuth } from "../contexts/AuthContext.jsx";
 import "./Login.css";
 
 export default function Login() {
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const handleLoginSuccess = () => {
-    // Mocked login success logic (replace with actual API/auth logic)
-    const isAuthenticated = true; // Replace with real authentication check
-    if (isAuthenticated) {
-      navigate("/"); // Redirect to HomePage after successful login
-    }
+    login();
+    navigate("/");
   };
 
   const handleForgotPassword = () => {
-    navigate("/forgot-password"); // Redirect to a forgot password page
+    navigate("/forgot-password");
   };
 
   const handleSignUp = () => {
-    navigate("/register"); // Redirect to registration page
+    navigate("/register");
   };
 
   return (
@@ -32,6 +32,7 @@ export default function Login() {
         onForgotPassword={handleForgotPassword}
         onSignUp={handleSignUp}
       />
+      <div className="login-links"></div>
     </div>
   );
 }

@@ -1,0 +1,47 @@
+/* Notifications Page Styles */
+.notifications-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.notifications-page h1 {
+  font-size: 2rem;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.notification-list {
+  list-style: none;
+  padding: 0;
+}
+
+.notification-item {
+  background: #f9fafb;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.notification-item p {
+  font-size: 0.9rem;
+  color: #1a202c;
+  margin-bottom: 0.4rem;
+}
+
+.notification-item small {
+  font-size: 0.7rem;
+  color: #4a5568;
+}
+
+@media (max-width: 768px) {
+  .notifications-page {
+    padding: 1.2rem;
+    border-radius: 0;
+  }
+}

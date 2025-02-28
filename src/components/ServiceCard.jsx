@@ -1,9 +1,13 @@
-export default function ServiceCard({ name, img }) {
+export default function ServiceCard({ service, onBookNow }) {
   return (
     <div className="service-card">
-      <img src={img} alt={name} />
-      <h3>{name}</h3>
-      <button className="book-now">Book Now</button>
+      <h3>{service.name}</h3>
+      <p>Provider: {service.provider}</p>
+      <p>Rating: {service.rating} / 5</p>
+      <p>Price: {service.price}</p>
+      <button className="book-now" onClick={onBookNow}>
+        Book Now
+      </button>
     </div>
   );
 }
